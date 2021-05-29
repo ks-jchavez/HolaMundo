@@ -1,0 +1,135 @@
+import { AggregationType, DateTimeFormatOptions, FormatProps } from '@kleeen/types';
+import { IntlShape, createIntl, createIntlCache } from '@formatjs/intl';
+import { Language, useLocalization } from './useLocalization';
+
+import { ReactNode } from 'react';
+import { isNilOrEmpty } from '@kleeen/common/utils';
+
+interface UseTextFormatterProps {
+  format: FormatProps;
+  formatType: string;
+  transformation?: string;
+}
+
+enum FormatTypes {
+  number = 'formatNumber',
+  date = 'formatDate',
+}
+
+type FormatOptions = DateTimeFormatOptions | { style?: string; maximumFractionDigits?: number };
+
+interface FormatConfiguration {
+  format: string;
+  options: FormatOptions;
+  transformValue?: (value: ReactNode) => ReactNode;
+}
+
+const cache = createIntlCache();
+let globalIntl: IntlShape<string>;
+let globalLocale: Language;
+
+const getIntl = (lang: Language): IntlShape<string> => {
+  if (!globalIntl || lang !== globalLocale) {
+    globalIntl = createIntl({ locale: lang }, cache);
+    globalLocale = lang;
+  }
+  return globalIntl;
+};
+
+const formatByTransformation = {
+  [AggregationType.Average]: FormatTypes.number,
+  [AggregationType.Min]: FormatTypes.number,
+  [AggregationType.Max]: FormatTypes.number,
+  [AggregationType.Sum]: FormatTypes.number,
+  [AggregationType.Latest]: FormatTypes.number,
+  [AggregationType.Oldest]: FormatTypes.number,
+  [AggregationType.SelfSingle]: FormatTypes.number,
+  [AggregationType.SelfMulti]: FormatTypes.number,
+  [AggregationType.MaxSparkline]: FormatTypes.number,
+};
+
+export const formatByType = {
+  USD: {
+    transformations: formatByTransformation,
+    options: { style: 'currency', currency: 'USD' },
+  },
+  percent: {
+    transformations: formatByTransformation,
+    options: { style: 'percent', maximumFractionDigits: 2 },
+    transformValue: (value: ReactNode) => Number(value) / 100,
+  },
+  double: {
+    transformations: formatByTransformation,
+    options: { style: 'decimal', maximumFractionDigits: 2 },
+  },
+  random: {
+    transformations: formatByTransformation,
+    options: { style: 'decimal', maximumFractionDigits: 2 },
+  },
+  latitude: {
+    transformations: formatByTransformation,
+    options: { style: 'decimal', maximumFractionDigits: 2 },
+  },
+  longitude: {
+    transformations: formatByTransformation,
+    options: { style: 'decimal', maximumFractionDigits: 2 },
+  },
+  timestamp: {
+    defaultFormat: FormatTypes.date,
+    options: {
+      year: 'numeric',
+      month: 'numeric',
+      day: 'numeric',
+    },
+  },
+};
+
+const getMaxFractionDigits = (format: FormatProps) => {
+  return !isNilOrEmpty(format.maximumFractionDigits)
+    ? { maximumFractionDigits: format.maximumFractionDigits }
+    : null;
+};
+
+const formatMapByType = {
+  timestamp: (format: FormatProps) => format.dateTime,
+  double: getMaxFractionDigits,
+  random: getMaxFractionDigits,
+  latitude: getMaxFractionDigits,
+  longitude: getMaxFractionDigits,
+};
+
+function getConfigurationByType(type: string, transformation: AggregationType): FormatConfiguration {
+  const { transformations, options, defaultFormat, transformValue } = formatByType[type] || {};
+  const format = !isNilOrEmpty(transformations) && transformations[transformation];
+
+  return { format: format || defaultFormat, options, transformValue };
+}
+
+export const useTextFormatter = (
+  textFormatter: UseTextFormatterProps,
+  textFormatDefault?: string,
+): [(value: ReactNode) => ReactNode] => {
+  const { format, options, transformValue } = getConfigurationByType(
+    textFormatter.formatType,
+    (textFormatter.transformation as AggregationType) || AggregationType.SelfSingle,
+  );
+
+  if (isNilOrEmpty(format)) {
+    return [(value: ReactNode) => value];
+  }
+
+  const { language } = useLocalization();
+  const intl = getIntl(language);
+  const defaultFormat = textFormatDefault || options;
+  const typeFormatMap = formatMapByType[textFormatter.formatType];
+  const typeFormat = !isNilOrEmpty(typeFormatMap) && typeFormatMap(textFormatter.format || {});
+  const formatToUse = typeFormat || defaultFormat;
+
+  const formatter = (value: ReactNode): ReactNode => {
+    const transformedValue = !isNilOrEmpty(transformValue) ? transformValue(value) : value;
+
+    return intl[format](transformedValue, formatToUse);
+  };
+
+  return [formatter];
+};

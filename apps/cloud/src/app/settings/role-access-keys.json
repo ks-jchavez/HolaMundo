@@ -1,0 +1,49 @@
+{
+  "NAVIGATION": {
+    "CHILDREN": {
+      "GRAFICAS": {
+        "PERMISSIONS": {
+          "ADMIN": "SHOW",
+          "GUEST": "SHOW"
+        }
+      },
+      "NETFLIX": {
+        "PERMISSIONS": {
+          "ADMIN": "SHOW",
+          "GUEST": "SHOW"
+        }
+      }
+    }
+  },
+  "GRAFICAS": {
+    "CHILDREN": {
+      "WIDGETS": {
+        "CHILDREN": {
+          "EA6A827B-7A6B-4EA1-A5FD-923855BBC40C": {
+            "PERMISSIONS": {
+              "ADMIN": "SHOW",
+              "GUEST": "SHOW"
+            }
+          }
+        }
+      },
+      "VIEWS": {
+        "CHILDREN": {
+          "DASHBOARD": {
+            "PERMISSIONS": {
+              "ADMIN": "SHOW",
+              "GUEST": "SHOW"
+            }
+          }
+        }
+      }
+    }
+  },
+  "NETFLIX": {
+    "CHILDREN": {
+      "VIEWS": {
+        "CHILDREN": {}
+      }
+    }
+  }
+}
