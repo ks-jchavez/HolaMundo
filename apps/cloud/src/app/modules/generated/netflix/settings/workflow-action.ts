@@ -1,0 +1,228 @@
+import { AddDialog } from '@kleeen/react/atomic-elements';
+
+export const workflowAction = [
+  {
+    addModalAttributes: [
+      {
+        id: 101800,
+        name: 'titulo',
+        label: 'Titulo',
+        hasMany: false,
+        elements: { displayComponent: 'Label', inputComponent: 'FieldTextAutoComplete' },
+        rawEntityName: 'titulo',
+        params: {
+          baseModel: 'titulo',
+          value: { formatType: 'title', transformation: 'selfSingle', format: {} },
+        },
+      },
+      {
+        id: 113734,
+        name: 'laVeoONoLaVeo',
+        label: 'La Veo O No La Veo',
+        hasMany: false,
+        elements: {
+          inputComponent: 'CompositeComponent',
+          rules: [{ component: 'RadioGroup', maxChoices: 4 }, { component: 'SelectTextAutocomplete' }],
+          displayComponent: 'Label',
+        },
+        rawEntityName: 'laVeoONoLaVeo',
+        params: {
+          baseModel: 'laVeoONoLaVeo',
+          value: {
+            formatType: 'severity_level',
+            transformation: 'selfSingle',
+            format: {
+              examples: ['No la veo', 'Si la veo'],
+              valueLabels: [
+                { label: 'No la veo', value: 1 },
+                { label: 'Si la veo', value: 2 },
+              ],
+              max: 2,
+              min: 1,
+              severityBad: 1,
+              severityGood: 2,
+              severityLevels: 2,
+            },
+          },
+        },
+      },
+      {
+        id: 113653,
+        name: 'tomatasosEu',
+        label: 'Tomatasos Eu',
+        hasMany: false,
+        elements: {
+          inputComponent: 'CompositeComponent',
+          rules: [{ component: 'RadioGroup', maxChoices: 4 }, { component: 'SelectTextAutocomplete' }],
+          displayComponent: 'Label',
+        },
+        rawEntityName: 'tomatasosEu',
+        params: {
+          baseModel: 'tomatasosEu',
+          value: {
+            formatType: 'severity_level',
+            transformation: 'selfSingle',
+            format: {
+              examples: ['Bad', 'Good', 'Very Good'],
+              valueLabels: [
+                { label: 'Bad', value: 1 },
+                { label: 'Good', value: 2 },
+                { label: 'Very Good', value: 3 },
+              ],
+              max: 3,
+              min: 1,
+              severityBad: 1,
+              severityGood: 3,
+              severityLevels: 3,
+            },
+          },
+        },
+      },
+      {
+        id: 113652,
+        name: 'tomatasosMex',
+        label: 'Tomatasos Mex',
+        hasMany: false,
+        elements: {
+          inputComponent: 'CompositeComponent',
+          rules: [{ component: 'RadioGroup', maxChoices: 4 }, { component: 'SelectTextAutocomplete' }],
+          displayComponent: 'Label',
+        },
+        rawEntityName: 'tomatasosMex',
+        params: {
+          baseModel: 'tomatasosMex',
+          value: {
+            formatType: 'severity_level',
+            transformation: 'selfSingle',
+            format: {
+              examples: ['Pesima', 'Palomera', 'Agradable', 'Muy buena'],
+              valueLabels: [
+                { label: 'Pesima', value: 1 },
+                { label: 'Palomera', value: 2 },
+                { label: 'Agradable', value: 3 },
+                { label: 'Muy buena', value: 4 },
+              ],
+              max: 4,
+              min: 1,
+              severityBad: 1,
+              severityGood: 4,
+              severityLevels: 4,
+            },
+          },
+        },
+      },
+      {
+        id: 102139,
+        name: 'ranking',
+        label: 'Ranking',
+        hasMany: false,
+        elements: { displayComponent: 'Label', inputComponent: 'FieldTextAutoComplete' },
+        rawEntityName: 'ranking',
+        params: {
+          baseModel: 'ranking',
+          value: { formatType: 'double', transformation: 'selfSingle', format: { max: 9, min: 7 } },
+        },
+      },
+      {
+        id: 102138,
+        name: 'creditos',
+        label: 'Creditos',
+        hasMany: false,
+        elements: { displayComponent: 'Label', inputComponent: 'FieldTextAutoComplete' },
+        rawEntityName: 'creditos',
+        params: {
+          baseModel: 'creditos',
+          value: { formatType: 'integer', transformation: 'selfSingle', format: {} },
+        },
+      },
+      {
+        id: 101806,
+        name: 'tomatasos',
+        label: 'Tomatasos',
+        hasMany: false,
+        elements: {
+          inputComponent: 'CompositeComponent',
+          rules: [{ component: 'RadioGroup', maxChoices: 4 }, { component: 'SelectTextAutocomplete' }],
+          displayComponent: 'Label',
+        },
+        rawEntityName: 'tomatasos',
+        params: {
+          baseModel: 'tomatasos',
+          value: {
+            formatType: 'severity_level',
+            transformation: 'selfSingle',
+            format: {
+              examples: ['Muy pobre', 'Mala', 'Pasable', 'Buena', 'Excelente'],
+              valueLabels: [
+                { label: 'Muy pobre', value: 1 },
+                { label: 'Mala', value: 2 },
+                { label: 'Pasable', value: 3 },
+                { label: 'Buena', value: 4 },
+                { label: 'Excelente', value: 5 },
+              ],
+              max: 5,
+              min: 1,
+              severityBad: 1,
+              severityGood: 5,
+              severityLevels: 5,
+            },
+          },
+        },
+      },
+      {
+        id: 101805,
+        name: 'puntuacion',
+        label: 'Puntuacion',
+        hasMany: false,
+        elements: { displayComponent: 'Label', inputComponent: 'FieldTextAutoComplete' },
+        rawEntityName: 'puntuacion',
+        params: {
+          baseModel: 'puntuacion',
+          value: {
+            formatType: 'severity_score',
+            transformation: 'selfSingle',
+            format: { max: 100, min: 1, severityBad: 1, severityGood: 100, severityLevels: 3 },
+          },
+        },
+      },
+      {
+        id: 101804,
+        name: 'categoria',
+        label: 'Categoria',
+        hasMany: false,
+        elements: { displayComponent: 'Label', inputComponent: 'FieldTextAutoComplete' },
+        rawEntityName: 'categoria',
+        params: {
+          baseModel: 'categoria',
+          value: { formatType: 'string', transformation: 'selfSingle', format: {} },
+        },
+      },
+      {
+        id: 101802,
+        name: 'duracion',
+        label: 'Duracion',
+        hasMany: false,
+        elements: { displayComponent: 'Label', inputComponent: 'FieldTextAutoComplete' },
+        rawEntityName: 'duracion',
+        params: {
+          baseModel: 'duracion',
+          value: { formatType: 'integer', transformation: 'selfSingle', format: {} },
+        },
+      },
+    ],
+    areYouSure: false,
+    component: AddDialog,
+    description: undefined,
+    displayName: `Add`,
+    name: `add`,
+    type: `add`,
+  },
+  {
+    areYouSure: false,
+    component: undefined,
+    description: undefined,
+    displayName: `Delete`,
+    name: `_delete_`,
+    type: `delete`,
+  },
+];

@@ -1,0 +1,1573 @@
+[
+  {
+    "name": "Timestamp",
+    "formatType": "timestamp",
+    "initialQuantity": 50,
+    "properties": {
+      "displayValue": {
+        "format": {},
+        "formatType": "timestamp",
+        "name": "displayValue",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "timestamp"
+      }
+    }
+  },
+  {
+    "name": "Titulo",
+    "description": "",
+    "formatType": "title",
+    "initialQuantity": 50,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {},
+        "formatType": "title",
+        "name": "displayValue",
+        "params": [],
+        "statisticalType": "Data - Categorical - free form",
+        "type": "title"
+      },
+      "laVeoONoLaVeo": {
+        "description": "",
+        "format": {
+          "examples": [
+            "No la veo",
+            "Si la veo"
+          ],
+          "valueLabels": [
+            {
+              "label": "No la veo",
+              "value": 1
+            },
+            {
+              "label": "Si la veo",
+              "value": 2
+            }
+          ],
+          "max": 2,
+          "min": 1,
+          "severityBad": 1,
+          "severityGood": 2,
+          "severityLevels": 2
+        },
+        "formatType": "severity_level",
+        "name": "laVeoONoLaVeo",
+        "params": [
+          1,
+          2
+        ],
+        "statisticalType": "Data - Categorical - ordered - Severity Ranking",
+        "type": "LaVeoONoLaVeo"
+      },
+      "tomatasosEu": {
+        "description": "",
+        "format": {
+          "examples": [
+            "Bad",
+            "Good",
+            "Very Good"
+          ],
+          "valueLabels": [
+            {
+              "label": "Bad",
+              "value": 1
+            },
+            {
+              "label": "Good",
+              "value": 2
+            },
+            {
+              "label": "Very Good",
+              "value": 3
+            }
+          ],
+          "max": 3,
+          "min": 1,
+          "severityBad": 1,
+          "severityGood": 3,
+          "severityLevels": 3
+        },
+        "formatType": "severity_level",
+        "name": "tomatasosEu",
+        "params": [
+          1,
+          3
+        ],
+        "statisticalType": "Data - Categorical - ordered - Severity Ranking",
+        "type": "TomatasosEu"
+      },
+      "tomatasosMex": {
+        "description": "",
+        "format": {
+          "examples": [
+            "Pesima",
+            "Palomera",
+            "Agradable",
+            "Muy buena"
+          ],
+          "valueLabels": [
+            {
+              "label": "Pesima",
+              "value": 1
+            },
+            {
+              "label": "Palomera",
+              "value": 2
+            },
+            {
+              "label": "Agradable",
+              "value": 3
+            },
+            {
+              "label": "Muy buena",
+              "value": 4
+            }
+          ],
+          "max": 4,
+          "min": 1,
+          "severityBad": 1,
+          "severityGood": 4,
+          "severityLevels": 4
+        },
+        "formatType": "severity_level",
+        "name": "tomatasosMex",
+        "params": [
+          1,
+          4
+        ],
+        "statisticalType": "Data - Categorical - ordered - Severity Ranking",
+        "type": "TomatasosMex"
+      },
+      "ranking": {
+        "description": "",
+        "format": {
+          "max": 9,
+          "min": 7
+        },
+        "formatType": "double",
+        "name": "ranking",
+        "params": [
+          7,
+          9
+        ],
+        "statisticalType": "Data - Numeric - NTG - Continuous",
+        "type": "Ranking"
+      },
+      "creditos": {
+        "description": "",
+        "format": {},
+        "formatType": "integer",
+        "name": "creditos",
+        "params": [],
+        "statisticalType": "Data - Numeric - NTG - Discrete",
+        "type": "Creditos"
+      },
+      "tomatasos": {
+        "description": "",
+        "format": {
+          "examples": [
+            "Muy pobre",
+            "Mala",
+            "Pasable",
+            "Buena",
+            "Excelente"
+          ],
+          "valueLabels": [
+            {
+              "label": "Muy pobre",
+              "value": 1
+            },
+            {
+              "label": "Mala",
+              "value": 2
+            },
+            {
+              "label": "Pasable",
+              "value": 3
+            },
+            {
+              "label": "Buena",
+              "value": 4
+            },
+            {
+              "label": "Excelente",
+              "value": 5
+            }
+          ],
+          "max": 5,
+          "min": 1,
+          "severityBad": 1,
+          "severityGood": 5,
+          "severityLevels": 5
+        },
+        "formatType": "severity_level",
+        "name": "tomatasos",
+        "params": [
+          1,
+          5
+        ],
+        "statisticalType": "Data - Categorical - ordered - Severity Ranking",
+        "type": "Tomatasos"
+      },
+      "puntuacion": {
+        "description": "",
+        "format": {
+          "max": 100,
+          "min": 1,
+          "severityBad": 1,
+          "severityGood": 100,
+          "severityLevels": 3
+        },
+        "formatType": "severity_score",
+        "name": "puntuacion",
+        "params": [
+          1,
+          100
+        ],
+        "statisticalType": "Data - Numeric - NTG - Severity Ranking",
+        "type": "Puntuacion"
+      },
+      "categoria": {
+        "description": "",
+        "format": {},
+        "formatType": "string",
+        "name": "categoria",
+        "params": [],
+        "statisticalType": "Data - Categorical - free form",
+        "type": "Categoria"
+      },
+      "duracion": {
+        "description": "",
+        "format": {},
+        "formatType": "integer",
+        "name": "duracion",
+        "params": [],
+        "statisticalType": "Data - Numeric - NTG - Discrete",
+        "type": "Duracion"
+      },
+      "actores": {
+        "description": "",
+        "format": {},
+        "formatType": "full_name",
+        "name": "actores",
+        "params": [
+          "Actores",
+          20,
+          []
+        ],
+        "statisticalType": "Data - Categorical - free form",
+        "type": "arrayOf"
+      }
+    }
+  },
+  {
+    "name": "Actores",
+    "description": "",
+    "formatType": "full_name",
+    "initialQuantity": 50,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {},
+        "formatType": "full_name",
+        "name": "displayValue",
+        "params": [],
+        "statisticalType": "Data - Categorical - free form",
+        "type": "full_name"
+      },
+      "titulo": {
+        "description": "",
+        "format": {},
+        "formatType": "title",
+        "name": "titulo",
+        "params": [],
+        "statisticalType": "Data - Categorical - free form",
+        "type": "Titulo"
+      }
+    }
+  },
+  {
+    "name": "Duracion",
+    "description": "",
+    "formatType": "integer",
+    "initialQuantity": 50,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {},
+        "formatType": "integer",
+        "name": "displayValue",
+        "params": [],
+        "statisticalType": "Data - Numeric - NTG - Discrete",
+        "type": "integer"
+      },
+      "titulo": {
+        "description": "",
+        "format": {},
+        "formatType": "title",
+        "name": "titulo",
+        "params": [],
+        "statisticalType": "Data - Categorical - free form",
+        "type": "Titulo"
+      },
+      "timestamp": {
+        "format": {
+          "dateTime": {
+            "day": "2-digit",
+            "month": "2-digit",
+            "year": "numeric"
+          }
+        },
+        "formatType": "timestamp",
+        "name": "timestamp",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "Timestamp"
+      }
+    }
+  },
+  {
+    "name": "Categoria",
+    "description": "",
+    "formatType": "string",
+    "initialQuantity": 50,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {},
+        "formatType": "string",
+        "name": "displayValue",
+        "params": [],
+        "statisticalType": "Data - Categorical - free form",
+        "type": "string"
+      },
+      "titulo": {
+        "description": "",
+        "format": {},
+        "formatType": "title",
+        "name": "titulo",
+        "params": [],
+        "statisticalType": "Data - Categorical - free form",
+        "type": "Titulo"
+      }
+    }
+  },
+  {
+    "name": "Puntuacion",
+    "description": "",
+    "formatType": "severity_score",
+    "initialQuantity": 3,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {
+          "max": 100,
+          "min": 1,
+          "severityBad": 1,
+          "severityGood": 100,
+          "severityLevels": 3
+        },
+        "formatType": "severity_score",
+        "name": "displayValue",
+        "params": [
+          1,
+          100,
+          {
+            "severityGood": 100,
+            "severityBad": 1,
+            "severityLevels": 3
+          }
+        ],
+        "statisticalType": "Data - Numeric - NTG - Severity Ranking",
+        "type": "severity_score"
+      },
+      "titulo": {
+        "description": "",
+        "format": {},
+        "formatType": "title",
+        "name": "titulo",
+        "params": [],
+        "statisticalType": "Data - Categorical - free form",
+        "type": "Titulo"
+      }
+    }
+  },
+  {
+    "name": "Tomatasos",
+    "description": "",
+    "formatType": "severity_level",
+    "initialQuantity": 5,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {
+          "examples": [
+            "Muy pobre",
+            "Mala",
+            "Pasable",
+            "Buena",
+            "Excelente"
+          ],
+          "valueLabels": [
+            {
+              "label": "Muy pobre",
+              "value": 1
+            },
+            {
+              "label": "Mala",
+              "value": 2
+            },
+            {
+              "label": "Pasable",
+              "value": 3
+            },
+            {
+              "label": "Buena",
+              "value": 4
+            },
+            {
+              "label": "Excelente",
+              "value": 5
+            }
+          ],
+          "max": 5,
+          "min": 1,
+          "severityBad": 1,
+          "severityGood": 5,
+          "severityLevels": 5
+        },
+        "formatType": "severity_level",
+        "name": "displayValue",
+        "params": [
+          1,
+          5,
+          {
+            "severityGood": 5,
+            "severityBad": 1,
+            "severityLevels": 5,
+            "valueLabels": [
+              {
+                "label": "Muy pobre",
+                "value": 1
+              },
+              {
+                "label": "Mala",
+                "value": 2
+              },
+              {
+                "label": "Pasable",
+                "value": 3
+              },
+              {
+                "label": "Buena",
+                "value": 4
+              },
+              {
+                "label": "Excelente",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "statisticalType": "Data - Categorical - ordered - Severity Ranking",
+        "type": "severity_level"
+      },
+      "titulo": {
+        "description": "",
+        "format": {},
+        "formatType": "title",
+        "name": "titulo",
+        "params": [],
+        "statisticalType": "Data - Categorical - free form",
+        "type": "Titulo"
+      }
+    }
+  },
+  {
+    "name": "Creditos",
+    "description": "",
+    "formatType": "integer",
+    "initialQuantity": 50,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {},
+        "formatType": "integer",
+        "name": "displayValue",
+        "params": [],
+        "statisticalType": "Data - Numeric - NTG - Discrete",
+        "type": "integer"
+      },
+      "titulo": {
+        "description": "",
+        "format": {},
+        "formatType": "title",
+        "name": "titulo",
+        "params": [],
+        "statisticalType": "Data - Categorical - free form",
+        "type": "Titulo"
+      }
+    }
+  },
+  {
+    "name": "Ranking",
+    "description": "",
+    "formatType": "double",
+    "initialQuantity": 50,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {
+          "max": 9,
+          "min": 7
+        },
+        "formatType": "double",
+        "name": "displayValue",
+        "params": [
+          7,
+          9
+        ],
+        "statisticalType": "Data - Numeric - NTG - Continuous",
+        "type": "double"
+      },
+      "titulo": {
+        "description": "",
+        "format": {},
+        "formatType": "title",
+        "name": "titulo",
+        "params": [],
+        "statisticalType": "Data - Categorical - free form",
+        "type": "Titulo"
+      }
+    }
+  },
+  {
+    "name": "TomatasosMex",
+    "description": "",
+    "formatType": "severity_level",
+    "initialQuantity": 4,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {
+          "examples": [
+            "Pesima",
+            "Palomera",
+            "Agradable",
+            "Muy buena"
+          ],
+          "valueLabels": [
+            {
+              "label": "Pesima",
+              "value": 1
+            },
+            {
+              "label": "Palomera",
+              "value": 2
+            },
+            {
+              "label": "Agradable",
+              "value": 3
+            },
+            {
+              "label": "Muy buena",
+              "value": 4
+            }
+          ],
+          "max": 4,
+          "min": 1,
+          "severityBad": 1,
+          "severityGood": 4,
+          "severityLevels": 4
+        },
+        "formatType": "severity_level",
+        "name": "displayValue",
+        "params": [
+          1,
+          4,
+          {
+            "severityGood": 4,
+            "severityBad": 1,
+            "severityLevels": 4,
+            "valueLabels": [
+              {
+                "label": "Pesima",
+                "value": 1
+              },
+              {
+                "label": "Palomera",
+                "value": 2
+              },
+              {
+                "label": "Agradable",
+                "value": 3
+              },
+              {
+                "label": "Muy buena",
+                "value": 4
+              }
+            ]
+          }
+        ],
+        "statisticalType": "Data - Categorical - ordered - Severity Ranking",
+        "type": "severity_level"
+      },
+      "titulo": {
+        "description": "",
+        "format": {},
+        "formatType": "title",
+        "name": "titulo",
+        "params": [],
+        "statisticalType": "Data - Categorical - free form",
+        "type": "Titulo"
+      }
+    }
+  },
+  {
+    "name": "TomatasosEu",
+    "description": "",
+    "formatType": "severity_level",
+    "initialQuantity": 3,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {
+          "examples": [
+            "Bad",
+            "Good",
+            "Very Good"
+          ],
+          "valueLabels": [
+            {
+              "label": "Bad",
+              "value": 1
+            },
+            {
+              "label": "Good",
+              "value": 2
+            },
+            {
+              "label": "Very Good",
+              "value": 3
+            }
+          ],
+          "max": 3,
+          "min": 1,
+          "severityBad": 1,
+          "severityGood": 3,
+          "severityLevels": 3
+        },
+        "formatType": "severity_level",
+        "name": "displayValue",
+        "params": [
+          1,
+          3,
+          {
+            "severityGood": 3,
+            "severityBad": 1,
+            "severityLevels": 3,
+            "valueLabels": [
+              {
+                "label": "Bad",
+                "value": 1
+              },
+              {
+                "label": "Good",
+                "value": 2
+              },
+              {
+                "label": "Very Good",
+                "value": 3
+              }
+            ]
+          }
+        ],
+        "statisticalType": "Data - Categorical - ordered - Severity Ranking",
+        "type": "severity_level"
+      },
+      "titulo": {
+        "description": "",
+        "format": {},
+        "formatType": "title",
+        "name": "titulo",
+        "params": [],
+        "statisticalType": "Data - Categorical - free form",
+        "type": "Titulo"
+      }
+    }
+  },
+  {
+    "name": "LaVeoONoLaVeo",
+    "description": "",
+    "formatType": "severity_level",
+    "initialQuantity": 2,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {
+          "examples": [
+            "No la veo",
+            "Si la veo"
+          ],
+          "valueLabels": [
+            {
+              "label": "No la veo",
+              "value": 1
+            },
+            {
+              "label": "Si la veo",
+              "value": 2
+            }
+          ],
+          "max": 2,
+          "min": 1,
+          "severityBad": 1,
+          "severityGood": 2,
+          "severityLevels": 2
+        },
+        "formatType": "severity_level",
+        "name": "displayValue",
+        "params": [
+          1,
+          2,
+          {
+            "severityGood": 2,
+            "severityBad": 1,
+            "severityLevels": 2,
+            "valueLabels": [
+              {
+                "label": "No la veo",
+                "value": 1
+              },
+              {
+                "label": "Si la veo",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "statisticalType": "Data - Categorical - ordered - Severity Ranking",
+        "type": "severity_level"
+      },
+      "titulo": {
+        "description": "",
+        "format": {},
+        "formatType": "title",
+        "name": "titulo",
+        "params": [],
+        "statisticalType": "Data - Categorical - free form",
+        "type": "Titulo"
+      }
+    }
+  },
+  {
+    "name": "Ikea",
+    "description": "",
+    "formatType": "timestamp",
+    "initialQuantity": 50,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {},
+        "formatType": "timestamp",
+        "name": "displayValue",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "timestamp"
+      },
+      "sala": {
+        "description": "",
+        "format": {},
+        "formatType": "date",
+        "name": "sala",
+        "params": [
+          "Sala",
+          20,
+          []
+        ],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "arrayOf"
+      },
+      "jardin": {
+        "description": "",
+        "format": {
+          "valueLabels": [
+            {
+              "label": "High",
+              "value": 1
+            },
+            {
+              "label": "Medium",
+              "value": 2
+            },
+            {
+              "label": "Low",
+              "value": 3
+            }
+          ],
+          "max": 3,
+          "min": 1,
+          "severityBad": 1,
+          "severityGood": 3,
+          "severityLevels": 3
+        },
+        "formatType": "severity_level",
+        "name": "jardin",
+        "params": [
+          1,
+          3
+        ],
+        "statisticalType": "Data - Categorical - ordered - Severity Ranking",
+        "type": "Jardin"
+      },
+      "recamara": {
+        "description": "",
+        "format": {},
+        "formatType": "integer",
+        "name": "recamara",
+        "params": [
+          "Recamara",
+          20,
+          []
+        ],
+        "statisticalType": "Data - Numeric - NTG - Discrete",
+        "type": "arrayOf"
+      },
+      "cocina": {
+        "description": "",
+        "format": {},
+        "formatType": "country",
+        "name": "cocina",
+        "params": [],
+        "statisticalType": "Data - Categorical - unordered - geo",
+        "type": "Cocina"
+      },
+      "timestamp": {
+        "format": {
+          "dateTime": {
+            "day": "2-digit",
+            "month": "2-digit",
+            "year": "numeric"
+          }
+        },
+        "formatType": "timestamp",
+        "name": "timestamp",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "Timestamp"
+      }
+    }
+  },
+  {
+    "name": "Cocina",
+    "description": "",
+    "formatType": "country",
+    "initialQuantity": 50,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {},
+        "formatType": "country",
+        "name": "displayValue",
+        "params": [],
+        "statisticalType": "Data - Categorical - unordered - geo",
+        "type": "country"
+      },
+      "timestamp": {
+        "format": {
+          "dateTime": {
+            "day": "2-digit",
+            "month": "2-digit",
+            "year": "numeric"
+          }
+        },
+        "formatType": "timestamp",
+        "name": "timestamp",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "Timestamp"
+      },
+      "ikea": {
+        "description": "",
+        "format": {},
+        "formatType": "timestamp",
+        "name": "ikea",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "Ikea"
+      }
+    }
+  },
+  {
+    "name": "Recamara",
+    "description": "",
+    "formatType": "integer",
+    "initialQuantity": 50,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {},
+        "formatType": "integer",
+        "name": "displayValue",
+        "params": [],
+        "statisticalType": "Data - Numeric - NTG - Discrete",
+        "type": "integer"
+      },
+      "timestamp": {
+        "format": {
+          "dateTime": {
+            "day": "2-digit",
+            "month": "2-digit",
+            "year": "numeric"
+          }
+        },
+        "formatType": "timestamp",
+        "name": "timestamp",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "Timestamp"
+      },
+      "ikea": {
+        "description": "",
+        "format": {},
+        "formatType": "timestamp",
+        "name": "ikea",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "Ikea"
+      }
+    }
+  },
+  {
+    "name": "Jardin",
+    "description": "",
+    "formatType": "severity_level",
+    "initialQuantity": 3,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {
+          "valueLabels": [
+            {
+              "label": "High",
+              "value": 1
+            },
+            {
+              "label": "Medium",
+              "value": 2
+            },
+            {
+              "label": "Low",
+              "value": 3
+            }
+          ],
+          "max": 3,
+          "min": 1,
+          "severityBad": 1,
+          "severityGood": 3,
+          "severityLevels": 3
+        },
+        "formatType": "severity_level",
+        "name": "displayValue",
+        "params": [
+          1,
+          3,
+          {
+            "severityGood": 3,
+            "severityBad": 1,
+            "severityLevels": 3,
+            "valueLabels": [
+              {
+                "label": "High",
+                "value": 1
+              },
+              {
+                "label": "Medium",
+                "value": 2
+              },
+              {
+                "label": "Low",
+                "value": 3
+              }
+            ]
+          }
+        ],
+        "statisticalType": "Data - Categorical - ordered - Severity Ranking",
+        "type": "severity_level"
+      },
+      "ikea": {
+        "description": "",
+        "format": {},
+        "formatType": "timestamp",
+        "name": "ikea",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "Ikea"
+      }
+    }
+  },
+  {
+    "name": "Sala",
+    "description": "",
+    "formatType": "date",
+    "initialQuantity": 50,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {},
+        "formatType": "date",
+        "name": "displayValue",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "date"
+      },
+      "ikea": {
+        "description": "",
+        "format": {},
+        "formatType": "timestamp",
+        "name": "ikea",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "Ikea"
+      }
+    }
+  },
+  {
+    "name": "Mixup",
+    "description": "",
+    "formatType": "timestamp",
+    "initialQuantity": 50,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {},
+        "formatType": "timestamp",
+        "name": "displayValue",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "timestamp"
+      },
+      "smartHome": {
+        "description": "",
+        "format": {},
+        "formatType": "username",
+        "name": "smartHome",
+        "params": [
+          "SmartHome",
+          20,
+          []
+        ],
+        "statisticalType": "Data - Categorical - free form",
+        "type": "arrayOf"
+      },
+      "videoGames": {
+        "description": "",
+        "format": {},
+        "formatType": "card_type",
+        "name": "videoGames",
+        "params": [
+          "VideoGames",
+          20,
+          []
+        ],
+        "statisticalType": "Data - Categorical - unordered",
+        "type": "arrayOf"
+      },
+      "bocinas": {
+        "description": "",
+        "format": {},
+        "formatType": "locale",
+        "name": "bocinas",
+        "params": [
+          "Bocinas",
+          20,
+          []
+        ],
+        "statisticalType": "Data - Categorical - unordered",
+        "type": "arrayOf"
+      },
+      "accesorios": {
+        "description": "",
+        "format": {
+          "valueLabels": [
+            {
+              "label": "High",
+              "value": 1
+            },
+            {
+              "label": "Medium",
+              "value": 2
+            },
+            {
+              "label": "Low",
+              "value": 3
+            }
+          ],
+          "max": 3,
+          "min": 1,
+          "severityBad": 1,
+          "severityGood": 3,
+          "severityLevels": 3
+        },
+        "formatType": "severity_level",
+        "name": "accesorios",
+        "params": [
+          1,
+          3
+        ],
+        "statisticalType": "Data - Categorical - ordered - Severity Ranking",
+        "type": "Accesorios"
+      },
+      "tecnologia": {
+        "description": "",
+        "format": {},
+        "formatType": "timestamp",
+        "name": "tecnologia",
+        "params": [
+          "Tecnologia",
+          20,
+          []
+        ],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "arrayOf"
+      },
+      "timestamp": {
+        "format": {
+          "dateTime": {
+            "day": "2-digit",
+            "month": "2-digit",
+            "year": "numeric"
+          }
+        },
+        "formatType": "timestamp",
+        "name": "timestamp",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "Timestamp"
+      }
+    }
+  },
+  {
+    "name": "Tecnologia",
+    "description": "",
+    "formatType": "timestamp",
+    "initialQuantity": 50,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {},
+        "formatType": "timestamp",
+        "name": "displayValue",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "timestamp"
+      },
+      "mixup": {
+        "description": "",
+        "format": {},
+        "formatType": "timestamp",
+        "name": "mixup",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "Mixup"
+      },
+      "timestamp": {
+        "format": {
+          "dateTime": {
+            "day": "2-digit",
+            "month": "2-digit",
+            "year": "numeric"
+          }
+        },
+        "formatType": "timestamp",
+        "name": "timestamp",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "Timestamp"
+      }
+    }
+  },
+  {
+    "name": "Accesorios",
+    "description": "",
+    "formatType": "severity_level",
+    "initialQuantity": 3,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {
+          "valueLabels": [
+            {
+              "label": "High",
+              "value": 1
+            },
+            {
+              "label": "Medium",
+              "value": 2
+            },
+            {
+              "label": "Low",
+              "value": 3
+            }
+          ],
+          "max": 3,
+          "min": 1,
+          "severityBad": 1,
+          "severityGood": 3,
+          "severityLevels": 3
+        },
+        "formatType": "severity_level",
+        "name": "displayValue",
+        "params": [
+          1,
+          3,
+          {
+            "severityGood": 3,
+            "severityBad": 1,
+            "severityLevels": 3,
+            "valueLabels": [
+              {
+                "label": "High",
+                "value": 1
+              },
+              {
+                "label": "Medium",
+                "value": 2
+              },
+              {
+                "label": "Low",
+                "value": 3
+              }
+            ]
+          }
+        ],
+        "statisticalType": "Data - Categorical - ordered - Severity Ranking",
+        "type": "severity_level"
+      },
+      "accesorios": {
+        "description": "",
+        "format": {
+          "valueLabels": [
+            {
+              "label": "High",
+              "value": 1
+            },
+            {
+              "label": "Medium",
+              "value": 2
+            },
+            {
+              "label": "Low",
+              "value": 3
+            }
+          ],
+          "max": 3,
+          "min": 1,
+          "severityBad": 1,
+          "severityGood": 3,
+          "severityLevels": 3
+        },
+        "formatType": "severity_level",
+        "name": "accesorios",
+        "params": [
+          1,
+          3
+        ],
+        "statisticalType": "Data - Categorical - ordered - Severity Ranking",
+        "type": "Accesorios"
+      },
+      "timestamp": {
+        "format": {
+          "dateTime": {
+            "day": "2-digit",
+            "month": "2-digit",
+            "year": "numeric"
+          }
+        },
+        "formatType": "timestamp",
+        "name": "timestamp",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "Timestamp"
+      },
+      "mixup": {
+        "description": "",
+        "format": {},
+        "formatType": "timestamp",
+        "name": "mixup",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "Mixup"
+      }
+    }
+  },
+  {
+    "name": "Bocinas",
+    "description": "",
+    "formatType": "locale",
+    "initialQuantity": 50,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {},
+        "formatType": "locale",
+        "name": "displayValue",
+        "params": [],
+        "statisticalType": "Data - Categorical - unordered",
+        "type": "locale"
+      },
+      "mixup": {
+        "description": "",
+        "format": {},
+        "formatType": "timestamp",
+        "name": "mixup",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "Mixup"
+      }
+    }
+  },
+  {
+    "name": "VideoGames",
+    "description": "",
+    "formatType": "card_type",
+    "initialQuantity": 50,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {},
+        "formatType": "card_type",
+        "name": "displayValue",
+        "params": [],
+        "statisticalType": "Data - Categorical - unordered",
+        "type": "card_type"
+      },
+      "mixup": {
+        "description": "",
+        "format": {},
+        "formatType": "timestamp",
+        "name": "mixup",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "Mixup"
+      }
+    }
+  },
+  {
+    "name": "SmartHome",
+    "description": "",
+    "formatType": "username",
+    "initialQuantity": 50,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {},
+        "formatType": "username",
+        "name": "displayValue",
+        "params": [],
+        "statisticalType": "Data - Categorical - free form",
+        "type": "username"
+      },
+      "mixup": {
+        "description": "",
+        "format": {},
+        "formatType": "timestamp",
+        "name": "mixup",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "Mixup"
+      }
+    }
+  },
+  {
+    "name": "Liverpool",
+    "description": "",
+    "formatType": "severity_level",
+    "initialQuantity": 3,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {
+          "valueLabels": [
+            {
+              "label": "High",
+              "value": 1
+            },
+            {
+              "label": "Medium",
+              "value": 2
+            },
+            {
+              "label": "Low",
+              "value": 3
+            }
+          ],
+          "max": 3,
+          "min": 1,
+          "severityBad": 1,
+          "severityGood": 3,
+          "severityLevels": 3
+        },
+        "formatType": "severity_level",
+        "name": "displayValue",
+        "params": [
+          1,
+          3,
+          {
+            "severityGood": 3,
+            "severityBad": 1,
+            "severityLevels": 3,
+            "valueLabels": [
+              {
+                "label": "High",
+                "value": 1
+              },
+              {
+                "label": "Medium",
+                "value": 2
+              },
+              {
+                "label": "Low",
+                "value": 3
+              }
+            ]
+          }
+        ],
+        "statisticalType": "Data - Categorical - ordered - Severity Ranking",
+        "type": "severity_level"
+      },
+      "relojes": {
+        "description": "",
+        "format": {},
+        "formatType": "string",
+        "name": "relojes",
+        "params": [],
+        "statisticalType": "Data - Categorical - free form",
+        "type": "Relojes"
+      },
+      "mascotas": {
+        "description": "",
+        "format": {},
+        "formatType": "integer",
+        "name": "mascotas",
+        "params": [],
+        "statisticalType": "Data - Numeric - NTG - Discrete",
+        "type": "Mascotas"
+      },
+      "timestamp": {
+        "format": {
+          "dateTime": {
+            "day": "2-digit",
+            "month": "2-digit",
+            "year": "numeric"
+          }
+        },
+        "formatType": "timestamp",
+        "name": "timestamp",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "Timestamp"
+      }
+    }
+  },
+  {
+    "name": "Mascotas",
+    "description": "",
+    "formatType": "integer",
+    "initialQuantity": 50,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {},
+        "formatType": "integer",
+        "name": "displayValue",
+        "params": [],
+        "statisticalType": "Data - Numeric - NTG - Discrete",
+        "type": "integer"
+      },
+      "liverpool": {
+        "description": "",
+        "format": {
+          "valueLabels": [
+            {
+              "label": "High",
+              "value": 1
+            },
+            {
+              "label": "Medium",
+              "value": 2
+            },
+            {
+              "label": "Low",
+              "value": 3
+            }
+          ],
+          "max": 3,
+          "min": 1,
+          "severityBad": 1,
+          "severityGood": 3,
+          "severityLevels": 3
+        },
+        "formatType": "severity_level",
+        "name": "liverpool",
+        "params": [
+          1,
+          3
+        ],
+        "statisticalType": "Data - Categorical - ordered - Severity Ranking",
+        "type": "Liverpool"
+      }
+    }
+  },
+  {
+    "name": "Relojes",
+    "description": "",
+    "formatType": "string",
+    "initialQuantity": 50,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {},
+        "formatType": "string",
+        "name": "displayValue",
+        "params": [],
+        "statisticalType": "Data - Categorical - free form",
+        "type": "string"
+      },
+      "liverpool": {
+        "description": "",
+        "format": {
+          "valueLabels": [
+            {
+              "label": "High",
+              "value": 1
+            },
+            {
+              "label": "Medium",
+              "value": 2
+            },
+            {
+              "label": "Low",
+              "value": 3
+            }
+          ],
+          "max": 3,
+          "min": 1,
+          "severityBad": 1,
+          "severityGood": 3,
+          "severityLevels": 3
+        },
+        "formatType": "severity_level",
+        "name": "liverpool",
+        "params": [
+          1,
+          3
+        ],
+        "statisticalType": "Data - Categorical - ordered - Severity Ranking",
+        "type": "Liverpool"
+      }
+    }
+  }
+]

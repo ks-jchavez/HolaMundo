@@ -1,0 +1,9 @@
+{
+  "companyName": "Default Account",
+  "defaultHomePage": "/my-report",
+  "layout": {
+    "position": "nav-top"
+  },
+  "productName": "Default Product",
+  "crossLinkingInteraction": "Hover intent"
+}
