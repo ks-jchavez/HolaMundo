@@ -1,0 +1,9 @@
+{
+  "companyName": "Default Account",
+  "defaultHomePage": "/workflow-1",
+  "layout": {
+    "position": "nav-top"
+  },
+  "productName": "Default Product",
+  "crossLinkingInteraction": "Hover intent"
+}

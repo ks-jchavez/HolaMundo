@@ -1,0 +1,21 @@
+export const attributesOnCreate = [
+  {
+    dataType: 'string',
+    formatType: 'prime',
+    description: '',
+    id: 203467,
+    multiple: true,
+    name: 'audio',
+    statisticalType: 'Data - Categorical',
+    format: {},
+    settings: { isEditable: true, isFilledByEU: true },
+    canAddValues: true,
+    canEditValues: true,
+    crossLinking: [],
+    label: 'Audio',
+    type: 'string',
+    isDisplayValue: true,
+    hasMany: false,
+    transformation: 'selfSingle',
+  },
+];
