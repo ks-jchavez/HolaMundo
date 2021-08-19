@@ -1,0 +1,97 @@
+{
+  "NAVIGATION": {
+    "CHILDREN": {
+      "MYREPORT": {
+        "PERMISSIONS": {
+          "ADMIN": "SHOW",
+          "GUEST": "SHOW"
+        }
+      },
+      "GRAFICAS": {
+        "PERMISSIONS": {
+          "ADMIN": "SHOW",
+          "GUEST": "SHOW"
+        }
+      },
+      "NETFLIX": {
+        "PERMISSIONS": {
+          "ADMIN": "SHOW",
+          "GUEST": "SHOW"
+        }
+      }
+    }
+  },
+  "MYREPORT": {
+    "CHILDREN": {
+      "WIDGETS": {
+        "CHILDREN": {
+          "17D19CAB-0218-41CD-9677-3248728885A0": {
+            "PERMISSIONS": {
+              "ADMIN": "SHOW",
+              "GUEST": "SHOW"
+            }
+          },
+          "3CA6A981-D631-400F-A028-36513CC627EC": {
+            "PERMISSIONS": {
+              "ADMIN": "SHOW",
+              "GUEST": "SHOW"
+            }
+          },
+          "54F05FFA-4050-49EB-B0F0-AE517A316CB5": {
+            "PERMISSIONS": {
+              "ADMIN": "SHOW",
+              "GUEST": "SHOW"
+            }
+          },
+          "D1787228-F48F-4AAE-80D0-E03BD672311A": {
+            "PERMISSIONS": {
+              "ADMIN": "SHOW",
+              "GUEST": "SHOW"
+            }
+          }
+        }
+      },
+      "VIEWS": {
+        "CHILDREN": {
+          "DASHBOARD": {
+            "PERMISSIONS": {
+              "ADMIN": "SHOW",
+              "GUEST": "SHOW"
+            }
+          }
+        }
+      }
+    }
+  },
+  "GRAFICAS": {
+    "CHILDREN": {
+      "WIDGETS": {
+        "CHILDREN": {
+          "EA6A827B-7A6B-4EA1-A5FD-923855BBC40C": {
+            "PERMISSIONS": {
+              "ADMIN": "SHOW",
+              "GUEST": "SHOW"
+            }
+          }
+        }
+      },
+      "VIEWS": {
+        "CHILDREN": {
+          "DASHBOARD": {
+            "PERMISSIONS": {
+              "ADMIN": "SHOW",
+              "GUEST": "SHOW"
+            }
+          }
+        }
+      }
+    }
+  },
+  "NETFLIX": {
+    "CHILDREN": {
+      "VIEWS": {
+        "CHILDREN": {}
+      }
+    }
+  }
+}
