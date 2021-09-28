@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Timestamp",
+    "formatType": "timestamp",
+    "initialQuantity": 50,
+    "properties": {
+      "displayValue": {
+        "format": {},
+        "formatType": "timestamp",
+        "name": "displayValue",
+        "params": [],
+        "statisticalType": "Data - Numeric - Temporal",
+        "type": "timestamp"
+      }
+    }
+  },
+  {
+    "name": "Audio",
+    "description": "",
+    "formatType": "prime",
+    "initialQuantity": 50,
+    "properties": {
+      "displayValue": {
+        "description": "",
+        "format": {},
+        "formatType": "prime",
+        "name": "displayValue",
+        "params": [],
+        "statisticalType": "Data - Categorical",
+        "type": "string"
+      }
+    }
+  }
+]
