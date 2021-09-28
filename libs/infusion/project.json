@@ -1,0 +1,22 @@
+{
+  "root": "libs/infusion",
+  "sourceRoot": "libs/infusion/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/infusion/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/infusion"],
+      "options": {
+        "jestConfig": "libs/infusion/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

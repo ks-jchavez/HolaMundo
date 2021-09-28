@@ -1,0 +1,26 @@
+{
+  "NAVIGATION": {
+    "CHILDREN": {
+      "WORKFLOW1": {
+        "PERMISSIONS": {
+          "ADMIN": "SHOW",
+          "GUEST": "SHOW"
+        }
+      }
+    }
+  },
+  "WORKFLOW1": {
+    "CHILDREN": {
+      "VIEWS": {
+        "CHILDREN": {
+          "TABLEOF1": {
+            "PERMISSIONS": {
+              "ADMIN": "SHOW",
+              "GUEST": "SHOW"
+            }
+          }
+        }
+      }
+    }
+  }
+}
