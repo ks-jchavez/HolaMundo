@@ -1,0 +1,10 @@
+{
+  "companyName": "Default Account",
+  "defaultHomePage": "/workflow-1",
+  "exportConfig": "StandardExport",
+  "layout": {
+    "position": "nav-top"
+  },
+  "productName": "Default Product",
+  "crossLinkingInteraction": "On click"
+}
